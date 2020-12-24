@@ -7,3 +7,6 @@ feeds:
   c_91493749:
     name: "浅黑科技"
     url: "https://www.zhihu.com/column/c_91493749"
+  TensorFlownews:
+    name: "TensorFlownews"
+    url: "https://www.zhihu.com/column/TensorFlownews"
