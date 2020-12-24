@@ -1,12 +1,11 @@
 feeds:
   austingebauer:
     name: "Austin Gebauer"
-    url: https://austingebauer.com/
+    url: "https://austingebauer.com/"
     xpath: "//ul[@class='list-unstyled']/li/a"
-    
   c_91493749:
     name: "浅黑科技"
     url: "https://www.zhihu.com/column/c_91493749"
-  TensorFlownews:
+  tensorflownews:
     name: "TensorFlownews"
     url: "https://www.zhihu.com/column/TensorFlownews"
