@@ -2,6 +2,7 @@ package models
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -37,7 +38,13 @@ func GetAtomFeed(slug string) (atom string, err error) {
 	feeds := c.Get("feeds").(map[string]interface{})
 
 	var feed Feed
-	if err = mapstructure.Decode(feeds[slug], &feed); err != nil {
+	val, ok := feeds[slug]
+	if !ok {
+		err = errors.New("feed not found!")
+		return
+	}
+
+	if err = mapstructure.Decode(val, &feed); err != nil {
 		return
 	}
 	atom, err = feed.GenerateFeed()
