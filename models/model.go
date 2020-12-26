@@ -31,6 +31,7 @@ type ZhihuPost struct {
 	Url     string
 	Content string
 	Excerpt string
+	Type    string
 }
 
 func GetAtomFeed(slug string) (atom string, err error) {
@@ -130,6 +131,9 @@ func (f *Feed) GenerateFeedZhiHu() (atom string, err error) {
 	}
 
 	for _, post := range jcontent.ZhihuPosts {
+		if post.Type == "question" {
+			continue
+		}
 		items = append(items, &feeds.Item{
 			Title:       post.Title,
 			Link:        &feeds.Link{Href: post.Url},
