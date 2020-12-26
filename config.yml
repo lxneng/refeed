@@ -9,3 +9,7 @@ feeds:
   tensorflownews:
     name: "TensorFlownews"
     url: "https://www.zhihu.com/column/TensorFlownews"
+  sohamkamani:
+    name: "Soham Kamani"
+    url: "https://www.sohamkamani.com/blog/"
+    xpath: "//a[@class='blog__link']"
