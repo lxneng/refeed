@@ -131,7 +131,7 @@ func (f *Feed) GenerateFeedZhiHu() (atom string, err error) {
 	}
 
 	for _, post := range jcontent.ZhihuPosts {
-		if post.Type == "question" {
+		if post.Type == "answer" {
 			continue
 		}
 		items = append(items, &feeds.Item{
