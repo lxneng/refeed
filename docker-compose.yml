@@ -7,3 +7,4 @@ services:
       - "5100:5000"
     volumes:
       - ./config.yml:/app/config.yml
+    restart: always
