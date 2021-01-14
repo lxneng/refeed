@@ -13,3 +13,7 @@ feeds:
     name: "Soham Kamani"
     url: "https://www.sohamkamani.com/blog/"
     xpath: "//a[@class='blog__link']"
+  mojotv:
+    name: "MojoTech"
+    url: "https://mojotv.cn/"
+    xpath: "//article/table/tbody/tr/td/a"
