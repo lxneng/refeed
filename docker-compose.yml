@@ -3,6 +3,7 @@ services:
   app:
     build: .
     image: refeed
+    container_name: refeed
     ports:
       - "5100:5000"
     volumes:
